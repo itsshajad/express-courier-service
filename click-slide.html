@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home work</title>
+	<link rel="stylesheet" href="css/all.min.css">
+	<style>
+	*{padding: 0;}
+	#sld { width:100%; position: fixed; right: -94%; transition: all 1s; background: #acdcac; border-radius: 10px; 
+		box-shadow: 0 0 5px 2px rgba(256,0,0,0.2);}
+	div {float: left; text-align: center; padding: 10px;;}
+	#left { background: #cadcac;   height: 122px; border-radius: 5px; transition: all 1s;}
+	
+	#left:hover {box-shadow: 0 0 9px 1px grey;}
+	span{display: block; font-weight: bold;}
+	input{height: 20px; border-radius: 5px; outline-style: none; border:none; padding: 5px;}
+
+	.fix{animation: rot 5s linear infinite;}
+	@keyframes rot{
+		from{transform: rotate(0deg);}
+		to{transform: rotate(360deg);}
+	}
+	</style>
+
+</head>
+
+<body>
+<div class="fix">
+<i class="far fa-sun"></i>
+</div>
+
+<div id="sld">
+	<div id="left" onclick="one()"> <span>L</span><span>O</span><span>G</span><span>I</span><span>N</span> </div>
+	<div class="right">
+		<h3>Login</h3>
+	<input type="text" placeholder="User Name">
+	<input type="password" placeholder="User Password">
+	</div>
+</div>
+
+<script>
+	
+var unSld = true;
+function one() {
+	
+	var ms1 = document.getElementById('sld');
+	var ms2 = document.getElementById('left')
+
+	if(unSld == true){
+ms1.style.right = "0"
+ms2.style.transform="rotate(180deg)";
+	unSld = false;	
+	}
+
+	else{
+
+		ms1.style.right = "-384px"
+		ms2.style.transform="rotate(0deg)";
+		unSld = true;
+	}
+}
+
+</script>
+</body>
+</html>
